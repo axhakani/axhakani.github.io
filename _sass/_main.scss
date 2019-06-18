@@ -123,11 +123,13 @@ nav a {
 }
 
 .social {
+	padding-top: 25px;
 	font-size: 28px;
 }
 
 .text {
 	padding-top: 50px;
+	padding-bottom: 30px;
 }
 
 .social a {
@@ -140,10 +142,10 @@ nav a {
 }
 
 .moon {
-	padding-top: 30px;
+	padding-top: 40px;
 
 	& a {
-		font-size: 20px;
+		font-size: 24px;
 		text-decoration: none !important;
 		border-bottom: none !important;
 		box-shadow: none !important;
@@ -158,9 +160,9 @@ nav a {
 
 .footer {
 	clear: both;
-    position: relative;
-    margin-top: 100px;
-    height: 70px;
+    	position: relative;
+    	margin-top: 100px;
+   	height: 70px;
 	width: 100%; 
 	background-color: #F5D5ED;
 }
