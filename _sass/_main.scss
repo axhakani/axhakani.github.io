@@ -4,6 +4,7 @@
 	--nav-color: #622180;
 	--nav-underline: #F5D5ED;
 	--logo: url(/assets/img/vectorpurple.svg);
+	--footer: #F5D5ED;
 }
 
 .dark {
@@ -12,6 +13,7 @@
 	--nav-color: #F5D5ED;
 	--nav-underline: #8B50A6;
 	--logo: url(/assets/img/vectorpink.svg);
+	--footer: #8B50A6;
 }
 
 body {
@@ -164,5 +166,5 @@ nav a {
     	margin-top: 100px;
    	height: 70px;
 	width: 100%; 
-	background-color: #F5D5ED;
+	background-color: var(--footer);
 }
