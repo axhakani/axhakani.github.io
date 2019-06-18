@@ -1,0 +1,44 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.image %}
+    <meta property="twitter:image:src" content="{{ site.baseurl }}{{page.image }}">
+    {% else %}
+    <meta property="twitter:image:src" content="{{ site.baseurl }}/assets/img/pix.png">
+    {% endif %}
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ site.baseurl }}{{page.image }}">
+    {% else %}
+    <meta property="og:image" content="{{ site.baseurl }}/assets/img/pix.png">
+    {% endif %}
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{site.baseurl}}/assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/img/pix.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/img/pix.png">
+
+    <!-- Android Theme Color -->
+    <meta name="theme-color" content="#3f238a">
+
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/quicksand.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    
+</head>

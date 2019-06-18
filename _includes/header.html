@@ -1,0 +1,71 @@
+<header>
+<div class="container">
+
+<div class="navigation">
+<a id="menu" href="javascript:void(0);" onclick="menu()">
+<p>=</p>
+</a>
+
+<nav id="topnav" class="nav-menu">
+		<a href="about">About Me</a>
+		<a href="/assets/pdf/resume.pdf" download>Resume</a>
+		<a href="test">Dicka</a>
+</nav>
+ </div>
+
+ <div class="logo"></div> 
+	
+<div class="info">
+	<div class="row">
+	<div class="col-md-8 text">
+	<p>Hey, I'm Anja and I work as a SysAdmin at <a href="https://ura.design" target="_blank" rel="noopener">Ura Design</a>,
+		but I also do frontend development,
+		and I excel at it, like I did this webpage alone.
+		I am a Software Engineering student and a full-time weeb.</p>
+<div class="social">
+		<a href="https://twitter.com/anjaxhakani" target="_blank" rel="noopener">Twitter</a> 
+		<a href="https://github.com/axhakani" target="_blank" rel="noopener">GitHub</a>
+</div>
+	</div>
+	<div class="col-md-4">
+			<img src="/assets/img/pix.png" alt="pixaltedimage">
+	</div>
+	</div>	
+		<div class="moon">
+		 <a id="switch" onclick="dark();" href="#">Switch to <img class="switch" src="/assets/img/moon.svg"></a>
+	</div>
+</div>
+</div>
+<script>
+if (localStorage.getItem('dark')) {
+  document.body.classList.add('dark');
+  document.getElementById("switch").innerHTML = 'Switch to <img class="switch" src="/assets/img/sun.svg">';
+}
+
+function dark(){
+if (document.body.classList.contains('dark')) {
+  document.body.classList.remove('dark');
+  localStorage.removeItem('dark');
+  document.getElementById("switch").innerHTML = 'Switch to <img class="switch" src="/assets/img/moon.svg">';
+}
+ else {
+  document.body.classList.add('dark');
+  localStorage.setItem('dark', true);
+  document.getElementById("switch").innerHTML = 'Switch to <img class="switch" src="/assets/img/sun.svg">';
+}
+}
+</script>
+
+<script>
+function menu() {
+  var x = document.getElementById("topnav");
+  if (x.className === "nav-menu") {
+    x.className += " responsive none";
+    document.getElementById("navigation").style.height = "300px";
+  } else {
+    x.className = "nav-menu";
+    document.getElementById("navigation").style.height = "100px";
+  }
+}
+</script>
+</header>
